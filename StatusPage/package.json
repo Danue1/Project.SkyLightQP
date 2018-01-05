@@ -1,0 +1,29 @@
+{
+  "name": "statuspage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SkyLightQP/Project.SkyLightQP/tree/master/StatusPage"
+  },
+  "keywords": [
+    "status",
+    "ping"
+  ],
+  "author": "SkyLightQP",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "log4js": "^2.4.1",
+    "moment": "^2.20.1",
+    "on-finished": "^2.3.0",
+    "path": "^0.12.7",
+    "ping": "^0.2.2",
+    "serve-static": "^1.13.1"
+  }
+}
