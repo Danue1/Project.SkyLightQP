@@ -4,7 +4,7 @@ const express = require('express'),
     static = require("serve-static"),
     bodyParser = require('body-parser'),
     logger = require('log4js').getLogger(), 
-    onFinished = require('on-finished'),
+    onFinished = require('on-finished');
 
 const port = 3001;
 
