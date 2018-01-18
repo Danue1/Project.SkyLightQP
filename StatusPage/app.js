@@ -10,7 +10,7 @@ const port = 3001;
 
 logger.level = 'ALL';
 
-app.use(static(path.join(__dirname,"public")));
+// app.use(static(path.join(__dirname,"public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

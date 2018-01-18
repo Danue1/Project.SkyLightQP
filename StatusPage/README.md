@@ -1,16 +1,22 @@
-# StatusPage
+# statuspage
 
-작동 중인 서비스를 확인할 수 있습니다.
+> Nuxt.js project
 
-## 사용된 언어
+## Build Setup
 
-- Node.js
-- HTML
+``` bash
+# install dependencies
+$ npm install # Or yarn install
 
-## 제작자
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-- 하늘빛QP(SkyLightQP)
+# build for production and launch server
+$ npm run build
+$ npm start
 
-## 라이센스
+# generate static project
+$ npm run generate
+```
 
-이 프로젝트는 MIT 라이센스를 사용합니다.
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

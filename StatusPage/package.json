@@ -4,7 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -21,6 +26,7 @@
     "express": "^4.16.2",
     "log4js": "^2.4.1",
     "moment": "^2.20.1",
+    "nuxt": "^1.1.1",
     "on-finished": "^2.3.0",
     "path": "^0.12.7",
     "serve-static": "^1.13.1"
