@@ -4,3 +4,4 @@
 *.iml
 .idea/modules.xml
 node_modules/
+.idea/misc.xml
