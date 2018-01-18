@@ -1,18 +1,24 @@
 const express = require('express'),
     app = express(),
-    path = require('path'),
-    static = require("serve-static"),
-    bodyParser = require('body-parser'),
-    logger = require('log4js').getLogger(), 
-    onFinished = require('on-finished');
-
+    logger = require('log4js').getLogger(),
+    onFinished = require('on-finished'),
+    nuxtConfig = require('./nuxt.config.js'),
+    { Nuxt, Builder } = require('nuxt')
 const port = 3001;
 
 logger.level = 'ALL';
 
-// app.use(static(path.join(__dirname,"public")));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// Init Nuxt.js
+const nuxt = new Nuxt(nuxtConfig)
+
+// Build only in dev mode
+if (nuxtConfig.dev) {
+  const builder = new Builder(nuxt)
+  builder.build()
+}
+
+// Give nuxt middleware to express
+app.use(nuxt.render)
 
 app.use((req, res, next) => {
     onFinished(res, (err, res) => {

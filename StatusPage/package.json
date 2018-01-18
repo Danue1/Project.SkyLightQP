@@ -22,7 +22,7 @@
   "author": "SkyLightQP",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    np"body-parser": "^1.18.2",
     "express": "^4.16.2",
     "log4js": "^2.4.1",
     "moment": "^2.20.1",
