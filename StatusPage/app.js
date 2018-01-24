@@ -4,31 +4,32 @@ const express = require('express'),
   onFinished = require('on-finished'),
   nuxtConfig = require('./nuxt.config.js'),
   { Nuxt, Builder } = require('nuxt')
-const port = 3000;
-
-logger.level = 'ALL';
-
-// Init Nuxt.js
+const port = 3000
 const nuxt = new Nuxt(nuxtConfig)
 
-// Build only in dev mode
+if (process.env.NODE_ENV === 'production') {
+  logger.level = 'ALL'
+} else if (process.env.NODE_ENV === 'development') {
+  logger.level = 'DEBUG'
+  nuxtConfig.dev = true
+}
+
 if (nuxtConfig.dev) {
   const builder = new Builder(nuxt)
   builder.build()
 }
 
-// Give nuxt middleware to express
-app.use(nuxt.render)
-
 app.use((req, res, next) => {
   onFinished(res, (err, res) => {
-    logger.info(req.protocol+' '+req.method+' '+res.statusCode+' '+req.ip.replace('::ffff:', '')+' '+req.originalUrl);
-  });
-  next();
-});
+    logger.info(req.protocol+' '+req.method+' '+res.statusCode+' '+req.ip.replace('::ffff:', '')+' '+req.originalUrl)
+  })
+  next()
+})
+
+app.use(nuxt.render)
 
 app.listen(port, function () {
-  logger.info('Start server! PORT:' + port);
-});
+  logger.info('Start Server. port: ' + port)
+})
 
 module.exports = app;
