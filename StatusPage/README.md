@@ -1,6 +1,6 @@
 # statuspage
 
-> Nuxt.js project
+> SkyLightQP's StatusPage
 
 ## Build Setup
 
