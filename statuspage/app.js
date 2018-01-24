@@ -1,11 +1,9 @@
-const express = require('express'),
-  app = express(),
-  logger = require('log4js').getLogger(),
-  onFinished = require('on-finished'),
-  nuxtConfig = require('./nuxt.config.js'),
-  { Nuxt, Builder } = require('nuxt')
-const port = 3000
-const nuxt = new Nuxt(nuxtConfig)
+const app = require('express')()
+const logger = require('log4js').getLogger()
+const onFinished = require('on-finished')
+const { Nuxt, Builder } = require('nuxt')
+
+const nuxtConfig = require('./nuxt.config')
 
 if (process.env.NODE_ENV === 'production') {
   logger.level = 'ALL'
@@ -14,22 +12,25 @@ if (process.env.NODE_ENV === 'production') {
   nuxtConfig.dev = true
 }
 
-if (nuxtConfig.dev) {
-  const builder = new Builder(nuxt)
-  builder.build()
-}
+const nuxt = new Nuxt(nuxtConfig)
+
+(nuxtConfig.dev) && new Builder(nuxt).build()
 
 app.use((req, res, next) => {
-  onFinished(res, (err, res) => {
-    logger.info(req.protocol+' '+req.method+' '+res.statusCode+' '+req.ip.replace('::ffff:', '')+' '+req.originalUrl)
+  onFinished(res, (err, { statusCode }) => {
+    const { protocol, method, ip, originalUrl } = req
+    const IP = ip.replace('::ffff:', '')
+
+    const message = [protocol, method, statusCode, IP, originalUrl].join(' ')
+    logger.info(message)
   })
+
   next()
 })
 
 app.use(nuxt.render)
 
-app.listen(port, function () {
-  logger.info('Start Server. port: ' + port)
-})
+const port = 3000
+app.listen(port, () => logger.info(`Start Server. port: ${ port }`))
 
-module.exports = app;
+module.exports = app

@@ -4,8 +4,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  head: {
-  },
+  head: {},
   /*
   ** Customize the progress bar color
   */
@@ -25,9 +24,9 @@ module.exports = {
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
-          enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
+          enforce: 'pre',
           exclude: /(node_modules)/
         })
       }
@@ -54,10 +53,16 @@ module.exports = {
       {
         package: '@fortawesome/fontawesome-free-brands',
         icons: ['faGithub', 'faBloggerB']
-      }, {
+      },
+      {
         package: '@fortawesome/fontawesome-free-solid',
-        icons: ['faHome', 'faSyncAlt', 'faEnvelope',
-          'faCheckCircle', 'faTimesCircle']
+        icons: [
+          'faHome',
+          'faSyncAlt',
+          'faEnvelope',
+          'faCheckCircle',
+          'faTimesCircle'
+        ]
       }
     ]
   },
