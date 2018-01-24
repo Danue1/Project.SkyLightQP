@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section>
     <div class="alert alert-dismissible alert-warning">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <h4>경고!</h4>
@@ -77,5 +77,5 @@
         </div>
       </div>
     </raw>
-  </div>
+  </section>
 </template>

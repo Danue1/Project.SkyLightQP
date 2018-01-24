@@ -2,7 +2,9 @@
   <div>
     <headers/>
     <div id="top-dummy"></div>
-    <nuxt/>
+    <div class="container">
+      <nuxt/>
+    </div>
     <footers/>
   </div>
 </template>
@@ -15,12 +17,12 @@
 </style>
 <script>
   import '~/assets/style.css'
-  import Headers from '~/components/Header.vue'
-  import Footers from '~/components/Footer.vue'
+  import headers from '~/components/Header.vue'
+  import footers from '~/components/Footer.vue'
   export default {
     components: {
-      Headers,
-      Footers
+      headers,
+      footers
     }
   }
 </script>
