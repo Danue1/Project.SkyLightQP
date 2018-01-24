@@ -1,0 +1,30 @@
+{
+  "name": "statuspage",
+  "version": "1.0.0",
+  "description": "SkyLightQP's StatusPage",
+  "author": "SkyLightQP",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node app.js",
+    "startdev": "cross-env NODE_ENV=development node app.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "cross-env": "^5.1.3",
+    "express": "^4.16.2",
+    "log4js": "^2.5.2",
+    "nuxt": "^1.0.0",
+    "on-finished": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
