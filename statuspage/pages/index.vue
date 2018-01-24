@@ -5,14 +5,14 @@
       <h4>경고!</h4>
       <p>예시.</p>
     </div>
-    <raw>
+    <div class="row">
       <div class="col-md-6">
         <div class="panel panel-success">
           <div class="panel-heading">
             <h3 class="panel-title"><b>Test</b></h3>
           </div>
           <div class="panel-body">
-            <p><i class="fa fa-check-circle text-success fa-fw" aria-hidden="true"></i> 서버가 정상 가동 중입니다.</p>
+            <p><span class="text-success"><fa-icon pack="fas" name="check-circle" :fixed-width="true" /></span> 서버가 정상 가동 중입니다.</p>
             <small>- 대한민국 서부</small>
           </div>
         </div>
@@ -23,20 +23,20 @@
             <h3 class="panel-title"><b>Test</b></h3>
           </div>
           <div class="panel-body">
-            <p><i class="fa fa-times-circle text-danger fa-fw" aria-hidden="true"></i> 서버가 닫혀있습니다.</p>
+            <p><span class="text-danger"><fa-icon pack="fas" name="times-circle" :fixed-width="true" /></span> 서버가 닫혀있습니다.</p>
             <small>- 대한민국 동부</small>
           </div>
         </div>
       </div>
-    </raw>
-    <raw>
+    </div>
+    <div class="row">
       <div class="col-md-6">
         <div class="panel panel-success">
           <div class="panel-heading">
             <h3 class="panel-title"><b>Test</b></h3>
           </div>
           <div class="panel-body">
-            <p><i class="fa fa-check-circle text-success fa-fw" aria-hidden="true"></i> 서버가 정상 가동 중입니다.</p>
+            <p><span class="text-success"><fa-icon pack="fas" name="check-circle" /></span> 서버가 정상 가동 중입니다.</p>
             <small>- 대한민국 서부</small>
           </div>
         </div>
@@ -47,20 +47,20 @@
             <h3 class="panel-title"><b>Test</b></h3>
           </div>
           <div class="panel-body">
-            <p><i class="fa fa-times-circle text-danger fa-fw" aria-hidden="true"></i> 서버가 닫혀있습니다.</p>
+            <p><span class="text-danger"><fa-icon pack="fas" name="times-circle" :fixed-width="true" /></span> 서버가 닫혀있습니다.</p>
             <small>- 대한민국 동부</small>
           </div>
         </div>
       </div>
-    </raw>
-    <raw>
+    </div>
+    <div class="row">
       <div class="col-md-6">
         <div class="panel panel-success">
           <div class="panel-heading">
             <h3 class="panel-title"><b>Test</b></h3>
           </div>
           <div class="panel-body">
-            <p><i class="fa fa-check-circle text-success fa-fw" aria-hidden="true"></i> 서버가 정상 가동 중입니다.</p>
+            <p><span class="text-success"><fa-icon pack="fas" name="check-circle" :fixed-width="true" /></span> 서버가 정상 가동 중입니다.</p>
             <small>- 대한민국 서부</small>
           </div>
         </div>
@@ -71,12 +71,12 @@
             <h3 class="panel-title"><b>Test</b></h3>
           </div>
           <div class="panel-body">
-            <p><i class="fa fa-times-circle text-danger fa-fw" aria-hidden="true"></i> 서버가 닫혀있습니다.</p>
+            <p><span class="text-danger"><fa-icon pack="fas" name="times-circle" :fixed-width="true" /></span> 서버가 닫혀있습니다.</p>
             <small>- 대한민국 동부</small>
           </div>
         </div>
       </div>
-    </raw>
+    </div>
   </section>
 </template>
 

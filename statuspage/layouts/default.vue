@@ -1,6 +1,7 @@
 <template>
   <div>
     <headers/>
+    <div id="top-dummy"></div>
     <div class="container">
       <nuxt/>
     </div>
@@ -16,6 +17,8 @@
 </style>
 
 <script>
+  import '~/node_modules/bootswatch/yeti/bootstrap.css'
+
   import '~/assets/style.css'
   import Headers from '~/components/Header.vue'
   import Footers from '~/components/Footer.vue'

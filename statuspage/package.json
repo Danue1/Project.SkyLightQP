@@ -14,11 +14,19 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free-brands": "^5.0.4",
+    "@fortawesome/fontawesome-free-solid": "^5.0.4",
+    "@nuxtjs/google-analytics": "^2.0.2",
+    "axios": "^0.17.1",
+    "bootstrap": "3.3.7",
+    "bootswatch": "3.3.7",
     "cross-env": "^5.1.3",
     "express": "^4.16.2",
+    "jquery": "^3.3.1",
     "log4js": "^2.5.2",
     "nuxt": "^1.0.0",
-    "on-finished": "^2.3.0"
+    "on-finished": "^2.3.0",
+    "qonfucius-nuxt-fontawesome": "^0.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

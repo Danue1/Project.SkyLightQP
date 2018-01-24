@@ -11,13 +11,12 @@
           </button>
           <a class="navbar-brand" href="http://status.skylightqp.kr">상태</a>
         </div>
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/SkyLightQP" target="_blank"><i class="fab fa-github fa-fw"></i> GitHub</a></li>
-            <li><a href="http://blog.skylightqp.kr" target="_blank"><i class="fab fa-blogger-b fa-fw"></i> Blog</a></li>
+            <li><a href="https://github.com/SkyLightQP" target="_blank"> <fa-icon pack="fab" name="github" :fixed-width="true" /> GitHub</a></li>
+            <li><a href="http://blog.skylightqp.kr" target="_blank"> <fa-icon pack="fab" name="blogger-b" :fixed-width="true" /> Blog</a></li>
           </ul>
         </div>
       </div>
