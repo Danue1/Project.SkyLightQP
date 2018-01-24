@@ -1,7 +1,6 @@
 <template>
   <div>
     <headers/>
-    <div id="top-dummy"></div>
     <div class="container">
       <nuxt/>
     </div>
@@ -15,14 +14,16 @@
     font-family: "Nanum Barun Gothic";
   }
 </style>
+
 <script>
   import '~/assets/style.css'
-  import headers from '~/components/Header.vue'
-  import footers from '~/components/Footer.vue'
+  import Headers from '~/components/Header.vue'
+  import Footers from '~/components/Footer.vue'
+
   export default {
     components: {
-      headers,
-      footers
+      Headers,
+      Footers
     }
   }
 </script>
